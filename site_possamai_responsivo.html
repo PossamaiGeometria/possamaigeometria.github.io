@@ -1,0 +1,127 @@
+<!-- Versão ajustada do site responsiva + WhatsApp no contato -->
+<!-- OBS: Apenas áreas modificadas foram ajustadas para manter tudo o que já estava bom -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>POSSAMAI Geometria e Manutenção Ltda. — A precisão que eleva sua indústria</title>
+
+  <style>
+    :root{
+      --primary:#0A1A2F;
+      --accent:#4AA3FF;
+      --muted:#6b7b8a;
+      --card:#ffffff;
+      --radius:12px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system; margin:0; color:var(--primary); background:#f4f7fb}
+    header{background:linear-gradient(180deg,var(--primary) 0%, #071224 60%); color:#fff; padding:48px 20px 60px}
+    .container{max-width:var(--maxw); margin:0 auto}
+    .brand{display:flex; align-items:center; gap:18px; flex-wrap:wrap}
+    .brand img{height:72px}
+    h1{font-size:28px; margin:0}
+    p.lead{margin:0; color:#d6e9ff}
+
+    nav{display:flex; gap:18px; justify-content:center; margin-top:22px; flex-wrap:wrap}
+    nav a{color:#cfe9ff; text-decoration:none; font-weight:600}
+
+    main{max-width:var(--maxw); margin:-28px auto 60px; padding:20px}
+    .card{background:var(--card); border-radius:var(--radius); padding:22px; box-shadow:0 8px 24px rgba(10,26,47,0.08); margin-bottom:18px}
+
+    .grid{display:grid; grid-template-columns:1fr 360px; gap:20px}
+    .services ul{list-style:none; padding:0; margin:0}
+    .services li{padding:12px 14px; border-left:4px solid var(--accent); background:#fff; margin-bottom:10px; border-radius:8px}
+
+    .contact .btn-whatsapp{background:#25D366; color:#fff; font-weight:700; padding:10px 14px; border-radius:8px; text-decoration:none; display:inline-block}
+    .contact .btn-email{background:var(--accent); color:var(--primary); font-weight:700; padding:10px 14px; border-radius:8px; text-decoration:none; display:inline-block}
+
+    .features{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    .feature{background:linear-gradient(180deg,#fff,#f7fbff); padding:12px; border-radius:10px; text-align:center}
+
+    .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+    .gallery img{width:100%; height:140px; object-fit:cover; border-radius:8px}
+
+    @media(max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:520px){
+      .features{grid-template-columns:1fr}
+      .brand{justify-content:center; text-align:center}
+      nav{font-size:14px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container brand">
+    <img src="POSSAMAI_Geometria_e_Manutenção-removebg-preview.png" alt="logo" />
+    <div>
+      <h1>POSSAMAI Geometria e Manutenção Ltda.</h1>
+      <p class="lead">A precisão que eleva sua indústria</p>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#quem">Quem Somos</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- Contato Ajustado -->
+  <section id="contato" class="card">
+    <h2>Contato / Contact / Contacto</h2>
+
+    <form id="contactForm" action="https://formsubmit.co/contato.geometriapossamai@gmail.com" method="POST">
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap">
+        <input name="name" placeholder="Nome / Name / Nombre" required style="flex:1; padding:10px; border-radius:8px; border:1px solid #dce6f2" />
+        <input name="company" placeholder="Empresa / Company / Empresa" style="flex:1; padding:10px; border-radius:8px; border:1px solid #dce6f2" />
+      </div>
+
+      <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap">
+        <input name="email" type="email" placeholder="E-mail" required style="flex:1; padding:10px; border-radius:8px; border:1px solid #dce6f2" />
+        <input name="phone" placeholder="Telefone / Phone" style="flex:1; padding:10px; border-radius:8px; border:1px solid #dce6f2" />
+      </div>
+
+      <textarea name="message" placeholder="Mensagem / Message / Mensaje" required style="width:100%; min-height:120px; margin-top:10px; padding:10px; border-radius:8px; border:1px solid #dce6f2"></textarea>
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://possamaigeometria.github.io/?msg=enviado" />
+
+      <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap">
+        <button type="submit" class="btn-email">Enviar / Send</button>
+        <a class="btn-whatsapp" href="https://wa.me/5511995483051" target="_blank">WhatsApp</a>
+      </div>
+    </form>
+
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function(){
+        setTimeout(()=>alert("Obrigado! Sua mensagem foi enviada."), 300);
+      });
+    </script>
+
+    <p style="margin-top:16px">POSSAMAI Geometria e Manutenção Ltda. — CNPJ 32.623.244/0001-17</p>
+  </section>
+
+</main>
+
+<footer style="background:var(--primary); color:#fff; padding:24px 0; margin-top:40px">
+  <div class="container" style="text-align:center">
+    POSSAMAI Geometria e Manutenção Ltda. — CREA/SP<br>
+    📞 +55 11 9 9548-3051 • contato.geometriapossamai@gmail.com
+  </div>
+</footer>
+
+</body>
+</html>
