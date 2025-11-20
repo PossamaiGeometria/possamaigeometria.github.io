@@ -259,7 +259,7 @@
     <section id="contato" class="card">
       <h2>Contato / Contact / Contacto</h2>
 
-      <form id="contactForm">
+      <form action="https://formsubmit.co/contato.geometriapossamai@gmail.com" method="POST">
         <div style="display:flex; gap:10px; flex-wrap:wrap">
           <input name="name" placeholder="Nome / Name / Nombre" style="flex:1; padding:10px; border-radius:8px; border:1px solid #dce6f2" required />
           <input name="company" placeholder="Empresa / Company / Empresa" style="flex:1; padding:10px; border-radius:8px; border:1px solid #dce6f2" />
@@ -269,6 +269,8 @@
           <input name="phone" placeholder="Telefone / Phone" style="flex:1; padding:10px; border-radius:8px; border:1px solid #dce6f2" />
         </div>
         <textarea name="message" placeholder="Mensagem / Message / Mensaje" style="width:100%; min-height:120px; margin-top:10px; padding:10px; border-radius:8px; border:1px solid #dce6f2" required></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://possamaigeometria.com.br/?msg=enviado">
         <div style="display:flex; gap:10px; margin-top:10px; align-items:center">
           <button type="submit" class="btn">Enviar / Send</button>
           <small style="color:var(--muted)">Responderemos em até 48h úteis</small>
@@ -288,7 +290,23 @@
 
       <p style="margin-top:16px">POSSAMAI Geometria e Manutenção Ltda. — CNPJ: 32.623.244/0001-17</p>
     </section>
-  </main>
+  <script>
+  // Exibe mensagem de sucesso após envio via FormSubmit
+  const params = new URLSearchParams(window.location.search);
+  if(params.get('msg') === 'enviado'){
+    const banner = document.createElement('div');
+    banner.textContent = 'Mensagem enviada com sucesso! Obrigado pelo contato.';
+    banner.style.background = '#4AA3FF';
+    banner.style.color = '#0A1A2F';
+    banner.style.padding = '12px 20px';
+    banner.style.margin = '20px auto';
+    banner.style.maxWidth = 'var(--maxw)';
+    banner.style.borderRadius = '10px';
+    banner.style.fontWeight = '600';
+    document.body.prepend(banner);
+  }
+</script>
+</main>
 
   <footer>
     <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap">
