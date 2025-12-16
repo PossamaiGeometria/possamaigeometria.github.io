@@ -1,328 +1,429 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>POSSAMAI Geometria e Manutenção Ltda. — A precisão que eleva sua indústria</title>
-  <meta name="description" content="POSSAMAI — serviços de alinhamento óptico e a laser, geometria e nivelamento industrial. Precisão, segurança e confiança para plantas industriais." />
-  <meta name="keywords" content="alinhamento laser, geometria industrial, nivelamento, manutenção industrial, alinhamento óptico" />
-  <meta name="author" content="POSSAMAI Geometria e Manutenção Ltda." />
-  <!-- Open Graph -->
-  <meta property="og:title" content="POSSAMAI Geometria e Manutenção" />
-  <meta property="og:description" content="Alinhamento óptico e a laser, geometria industrial e nivelamento — precisão que eleva sua indústria." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="POSSAMAI_Geometria_e_Manutenção-removebg-preview.png" />
+import { useState } from "react";
+import { Link } from "wouter";
+import { Menu, X, Check, Mail, Phone, MapPin, ChevronRight, Globe, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
-  <style>
-    :root{
-      --primary:#0A1A2F; /* deep navy */
-      --accent:#4AA3FF;   /* technical blue */
-      --muted:#6b7b8a;
-      --card:#ffffff;
-      --radius:12px;
-      --maxw:1100px;
+// Stock images
+import stockEngineer from "@assets/stock_images/industrial_machinery_456336e6.jpg";
+
+export default function Home() {
+  const [lang, setLang] = useState<"pt" | "en" | "es">("pt");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const content = {
+    pt: {
+      nav: ["Quem Somos", "Serviços", "Galeria", "Contato"],
+      hero: {
+        title: "Precisão que eleva sua indústria",
+        subtitle: "POSSAMAI Geometria e Manutenção Ltda.",
+        desc: "Especialistas em Alinhamento Óptico e a Laser, Geometria e Nivelamento Industrial.",
+        cta: "Solicitar Orçamento"
+      },
+      about: {
+        title: "Quem Somos",
+        text: "A POSSAMAI Geometria e Manutenção Ltda. é especializada em Geometria de Máquinas, Alinhamento Óptico-Laser e Nivelamento industrial. Com 6 anos de atuação empresarial somados aos 20 de experiência técnica do fundador, Eng. Daniel Possamai da Silva, oferecemos soluções de alta precisão para diversos setores da indústria.",
+        mission: {
+          title: "Nossa Missão",
+          text: "Prover serviços técnicos de precisão com segurança, inovação e confiabilidade, contribuindo diretamente para a eficiência e o desempenho dos equipamentos industriais dos nossos clientes."
+        }
+      },
+      services: {
+        title: "Nossos Serviços",
+        items: [
+          "Alinhamento óptico e a laser (motores, redutores, bombas, rolos, cardãs)",
+          "Nivelamento e geometria de máquinas",
+          "Comissionamentos e posicionamento técnico",
+          "Marcações técnicas e ajustes estruturais",
+          "Avaliações de linearidade, paralelismo, perpendicularidade e verticalidade"
+        ]
+      },
+      features: {
+        title: "Diferenciais",
+        items: ["Equipamentos WILD/Leica", "Laser Prüftechnik", "Calibração ISO/INMETRO"]
+      },
+      gallery: "Galeria",
+      contact: {
+        title: "Contato",
+        company_crea: "CREA-SP Empresa: 2821346",
+        tech_crea: "Responsável Técnico: Eng. Daniel Possamai da Silva — CREA-SP 5062339303",
+        phone: "+55 11 9 9548-3051",
+        email: "contato.geometriapossamai@gmail.com",
+        values: "Precisão · Segurança · Transparência · Compromisso"
+      },
+      values_section: {
+        title: "Nossos Valores",
+        items: [
+          {
+            title: "Precisão",
+            desc: "Compromisso inegociável com a exatidão em cada medição e ajuste."
+          },
+          {
+            title: "Segurança",
+            desc: "Prioridade absoluta na integridade das pessoas e dos equipamentos."
+          },
+          {
+            title: "Transparencia",
+            desc: "Clareza total nos diagnósticos, laudos e relações comerciais."
+          },
+          {
+            title: "Compromisso",
+            desc: "Dedicação para resolver os desafios técnicos dentro do prazo acordado."
+          }
+        ]
+      }
+    },
+    en: {
+      nav: ["About Us", "Services", "Gallery", "Contact"],
+      hero: {
+        title: "Precision that elevates your industry",
+        subtitle: "POSSAMAI Geometry and Maintenance",
+        desc: "Specialists in Optical and Laser Alignment, Geometry and Industrial Leveling.",
+        cta: "Request a Quote"
+      },
+      about: {
+        title: "About Us",
+        text: "POSSAMAI Geometria e Manutenção Ltda. specializes in Machine Geometry, Optical-Laser Alignment and Industrial Leveling. With 6 years as a company and over 20 years of technical experience by our founder, Eng. Daniel Possamai da Silva, we provide high-precision solutions to multiple industrial sectors.",
+        mission: {
+          title: "Our Mission",
+          text: "Provide precision technical services with safety, innovation and reliability, directly contributing to the efficiency and performance of our clients' industrial equipment."
+        }
+      },
+      services: {
+        title: "Our Services",
+        items: [
+          "Optical and laser alignment (motors, gearboxes, pumps, rolls, cardans)",
+          "Machine leveling and geometry",
+          "Commissioning and technical positioning",
+          "Technical marking and structural adjustments",
+          "Assessments of linearity, parallelism, perpendicularity and verticality"
+        ]
+      },
+      features: {
+        title: "Differentials",
+        items: ["WILD/Leica Equipment", "Prüftechnik Laser", "ISO/INMETRO Calibration"]
+      },
+      gallery: "Gallery",
+      contact: {
+        title: "Contact",
+        company_crea: "CREA-SP Company: 2821346",
+        tech_crea: "Technical Responsible: Eng. Daniel Possamai da Silva — CREA-SP 5062339303",
+        phone: "+55 11 9 9548-3051",
+        email: "contato.geometriapossamai@gmail.com",
+        values: "Precision · Safety · Transparency · Commitment"
+      },
+      values_section: {
+        title: "Our Values",
+        items: [
+          {
+            title: "Precision",
+            desc: "Non-negotiable commitment to accuracy in every measurement and adjustment."
+          },
+          {
+            title: "Safety",
+            desc: "Absolute priority on the integrity of people and equipment."
+          },
+          {
+            title: "Transparency",
+            desc: "Total clarity in diagnostics, reports, and commercial relationships."
+          },
+          {
+            title: "Commitment",
+            desc: "Dedication to solving technical challenges within the agreed timeframe."
+          }
+        ]
+      }
+    },
+    es: {
+      nav: ["Quiénes Somos", "Servicios", "Galería", "Contacto"],
+      hero: {
+        title: "La precisión que eleva su industria",
+        subtitle: "POSSAMAI Geometría y Mantenimiento",
+        desc: "Especialistas en Alineación Óptica y Láser, Geometría y Nivelación Industrial.",
+        cta: "Solicitar Presupuesto"
+      },
+      about: {
+        title: "Quiénes Somos",
+        text: "POSSAMAI Geometria e Manutenção Ltda. está especializada en Geometría de Máquinas, Alineación Óptica-Láser y Nivelación industrial. Con 6 años de actividad empresarial y más de 20 años de experiencia técnica de nuestro fundador, Eng. Daniel Possamai da Silva, ofrecemos soluciones de alta precisión para múltiples sectores industriales.",
+        mission: {
+          title: "Nuestra Misión",
+          text: "Proveer servicios técnicos de precisión con seguridad, innovación y confiabilidad, contribuyendo directamente a la eficiencia y el rendimiento de los equipos industriales de nuestros clientes."
+        }
+      },
+      services: {
+        title: "Nuestros Servicios",
+        items: [
+          "Alineación óptica y láser (motores, reductores, bombas, rodillos, cardanes)",
+          "Nivelación y geometría de máquinas",
+          "Puesta en marcha y posicionamiento técnico",
+          "Marcaciones técnicas y ajustes estructurales",
+          "Evaluaciones de linealidad, paralelismo, perpendicularidad y verticalidad"
+        ]
+      },
+      features: {
+        title: "Diferenciales",
+        items: ["Equipos WILD/Leica", "Láser Prüftechnik", "Calibración ISO/INMETRO"]
+      },
+      gallery: "Galería",
+      contact: {
+        title: "Contacto",
+        company_crea: "CREA-SP Empresa: 2821346",
+        tech_crea: "Responsable Técnico: Eng. Daniel Possamai da Silva — CREA-SP 5062339303",
+        phone: "+55 11 9 9548-3051",
+        email: "contato.geometriapossamai@gmail.com",
+        values: "Precisión · Seguridad · Transparencia · Compromiso"
+      },
+      values_section: {
+        title: "Nuestros Valores",
+        items: [
+          {
+            title: "Precisión",
+            desc: "Compromiso innegociable con la exactitud en cada medición y ajuste."
+          },
+          {
+            title: "Seguridad",
+            desc: "Prioridad absoluta en la integridad de las personas y los equipos."
+          },
+          {
+            title: "Transparencia",
+            desc: "Claridad total en diagnósticos, informes y relaciones comerciales."
+          },
+          {
+            title: "Compromiso",
+            desc: "Dedicación para resolver los desafíos técnicos dentro del plazo acordado."
+          }
+        ]
+      }
     }
-    *{box-sizing:border-box}
-    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--primary); background:#f4f7fb}
-    header{background:linear-gradient(180deg,var(--primary) 0%, #071224 60%); color:#fff; padding:48px 20px 60px}
-    .container{max-width:var(--maxw); margin:0 auto}
-    .brand{display:flex; align-items:center; gap:18px}
-    .brand img{height:72px}
-    h1{font-size:28px; margin:0 0 6px}
-    p.lead{margin:0; color:#d6e9ff}
+  };
 
-    nav{display:flex; gap:18px; justify-content:center; margin-top:22px}
-    nav a{color:#cfe9ff; text-decoration:none; font-weight:600}
+  const t = content[lang];
 
-    main{max-width:var(--maxw); margin:-28px auto 60px; padding:20px}
-    .card{background:var(--card); border-radius:var(--radius); padding:22px; box-shadow:0 8px 24px rgba(10,26,47,0.08); margin-bottom:18px}
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false);
+    }
+  };
 
-    .grid{display:grid; grid-template-columns:1fr 360px; gap:20px}
-    .services ul{list-style:none; padding:0; margin:0}
-    .services li{padding:12px 14px; border-left:4px solid var(--accent); background:linear-gradient(90deg,#fff,#fbfdff); margin-bottom:10px; border-radius:8px}
+  return (
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+      {/* Navigation */}
+      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div className="container mx-auto flex h-20 items-center justify-between px-4">
+          <div className="flex items-center gap-2 font-bold text-xl text-[#0A1A2F]">
+            <img src="/images/logo.png" alt="POSSAMAI Logo" className="h-12 w-auto object-contain" />
+          </div>
 
-    .aside .contact{display:flex; flex-direction:column; gap:10px}
-    .btn{display:inline-block; background:var(--accent); color:var(--primary); padding:10px 14px; border-radius:8px; font-weight:700; text-decoration:none}
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex gap-6">
+            <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-[#4AA3FF] transition-colors">{t.nav[0]}</button>
+            <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-[#4AA3FF] transition-colors">{t.nav[1]}</button>
+            <button onClick={() => scrollToSection('gallery')} className="text-sm font-medium hover:text-[#4AA3FF] transition-colors">{t.nav[2]}</button>
+            <button onClick={() => scrollToSection('contact')} className="text-sm font-medium hover:text-[#4AA3FF] transition-colors">{t.nav[3]}</button>
+          </nav>
 
-    .features{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
-    .feature{background:linear-gradient(180deg,#fff,#f7fbff); padding:12px; border-radius:10px; text-align:center}
+          <div className="flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-2 text-sm font-medium text-slate-500">
+              <Globe className="h-4 w-4" />
+              <button onClick={() => setLang('pt')} className={lang === 'pt' ? 'text-[#0A1A2F] font-bold' : 'hover:text-[#0A1A2F]'}>PT</button>
+              <span>/</span>
+              <button onClick={() => setLang('en')} className={lang === 'en' ? 'text-[#0A1A2F] font-bold' : 'hover:text-[#0A1A2F]'}>EN</button>
+              <span>/</span>
+              <button onClick={() => setLang('es')} className={lang === 'es' ? 'text-[#0A1A2F] font-bold' : 'hover:text-[#0A1A2F]'}>ES</button>
+            </div>
 
-    footer{background:var(--primary); color:#dfefff; padding:28px 20px; margin-top:30px}
+            <Button className="md:hidden" variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
+        </div>
 
-    /* gallery */
-    .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
-    .gallery img{width:100%; height:140px; object-fit:cover; border-radius:8px}
+        {/* Mobile Nav */}
+        {isMenuOpen && (
+          <div className="md:hidden border-t bg-white p-4 space-y-4">
+            <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 font-medium">{t.nav[0]}</button>
+            <button onClick={() => scrollToSection('services')} className="block w-full text-left py-2 font-medium">{t.nav[1]}</button>
+            <button onClick={() => scrollToSection('gallery')} className="block w-full text-left py-2 font-medium">{t.nav[2]}</button>
+            <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 font-medium">{t.nav[3]}</button>
+            <Separator />
+            <div className="flex gap-4 pt-2">
+              <button onClick={() => setLang('pt')} className={lang === 'pt' ? 'font-bold' : ''}>PT</button>
+              <button onClick={() => setLang('en')} className={lang === 'en' ? 'font-bold' : ''}>EN</button>
+              <button onClick={() => setLang('es')} className={lang === 'es' ? 'font-bold' : ''}>ES</button>
+            </div>
+          </div>
+        )}
+      </header>
 
-    /* responsive */
-    @media(max-width:900px){.grid{grid-template-columns:1fr} .features{grid-template-columns:repeat(2,1fr)} .gallery{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:520px){.features{grid-template-columns:1fr} nav{flex-wrap:wrap; gap:8px}}
+      <main>
+        {/* Hero */}
+        <section className="relative bg-[#0A1A2F] text-white py-20 md:py-32 overflow-hidden">
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#4AA3FF_1px,transparent_1px)] [background-size:16px_16px]"></div>
+          <div className="container mx-auto px-4 relative z-10 text-center">
+            <h2 className="text-[#4AA3FF] font-semibold tracking-wide uppercase mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">{t.hero.subtitle}</h2>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 max-w-4xl mx-auto leading-tight animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">{t.hero.title}</h1>
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">{t.hero.desc}</p>
+            <Button size="lg" className="bg-[#4AA3FF] hover:bg-[#3390FF] text-[#0A1A2F] font-bold text-lg px-8 animate-in fade-in zoom-in duration-500 delay-300" onClick={() => scrollToSection('contact')}>
+              {t.hero.cta}
+            </Button>
+          </div>
+        </section>
 
-    /* language tabs */
-    .langtabs{display:flex; gap:8px; justify-content:flex-end}
-    .langtabs button{background:transparent; color:#cfe9ff; border:1px solid rgba(255,255,255,0.06); padding:8px 10px; border-radius:8px}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container brand">
-      <img src="POSSAMAI_Geometria_e_Manutenção-removebg-preview.png" alt="POSSAMAI logo" />
-      <div>
-        <h1>POSSAMAI Geometria e Manutenção Ltda.</h1>
-        <p class="lead">A precisão que eleva sua indústria — Alinhamento Óptico e a Laser, Geometria industrial.</p>
-      </div>
-      <div style="margin-left:auto" class="langtabs">
-        <button onclick="setLang('pt')">PT</button>
-        <button onclick="setLang('es')">ES</button>
-        <button onclick="setLang('en')">EN</button>
-      </div>
+        {/* About & Mission */}
+        <section id="about" className="py-20 container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-[#0A1A2F]">{t.about.title}</h2>
+              <p className="text-lg text-slate-600 leading-relaxed">{t.about.text}</p>
+              
+              <div className="bg-slate-100 p-6 rounded-lg border-l-4 border-[#4AA3FF]">
+                <h3 className="font-bold text-[#0A1A2F] mb-2">{t.about.mission.title}</h3>
+                <p className="text-slate-600">{t.about.mission.text}</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 gap-4">
+               {/* About Image */}
+               <div className="aspect-video bg-slate-200 rounded-xl overflow-hidden shadow-lg relative group">
+                  <div className="absolute inset-0 bg-[#0A1A2F]/10 group-hover:bg-transparent transition-colors"></div>
+                  <img src="/images/about.jpg" alt="Industrial Precision" className="w-full h-full object-cover" />
+               </div>
+            </div>
+          </div>
+
+          {/* New Values Section */}
+          <div className="space-y-8">
+            <h3 className="text-2xl font-bold text-[#0A1A2F] text-center mb-8">{t.values_section.title}</h3>
+            <div className="grid md:grid-cols-4 gap-6">
+              {t.values_section.items.map((item, i) => (
+                <Card key={i} className="hover:shadow-lg transition-shadow border-t-4 border-t-[#4AA3FF]">
+                  <CardContent className="p-6 text-center">
+                    <h4 className="font-bold text-lg text-[#0A1A2F] mb-3">{item.title}</h4>
+                    <p className="text-slate-600 text-sm">{item.desc}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services & Features */}
+        <section id="services" className="bg-slate-100 py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-3 gap-12">
+              <div className="md:col-span-2 space-y-8">
+                <h2 className="text-3xl font-bold text-[#0A1A2F]">{t.services.title}</h2>
+                <div className="grid gap-4">
+                  {t.services.items.map((item, i) => (
+                    <Card key={i} className="border-none shadow-sm hover:shadow-md transition-shadow">
+                      <CardContent className="flex items-start gap-4 p-4">
+                        <div className="mt-1 bg-[#eef7ff] p-2 rounded-full text-[#4AA3FF]">
+                          <Check className="h-5 w-5" />
+                        </div>
+                        <span className="text-slate-700 font-medium">{item}</span>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="space-y-8">
+                <h2 className="text-3xl font-bold text-[#0A1A2F]">{t.features.title}</h2>
+                <div className="space-y-4">
+                  {t.features.items.map((item, i) => (
+                    <div key={i} className="bg-[#0A1A2F] text-white p-6 rounded-xl shadow-lg transform hover:-translate-y-1 transition-transform">
+                      <h3 className="font-bold text-lg text-center">{item}</h3>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery */}
+        <section id="gallery" className="py-20 container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-[#0A1A2F] mb-8 text-center">{t.gallery}</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+              <img src="/images/gallery1.jpg" alt="Equipamento 1" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+              <img src="/images/gallery2.jpg" alt="Equipamento 2" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+              <img src="/images/gallery3.jpg" alt="Campo" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+          </div>
+        </section>
+
+        {/* Contact */}
+        <section id="contact" className="bg-[#0A1A2F] text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h2 className="text-3xl font-bold mb-8">{t.contact.title}</h2>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <MapPin className="h-6 w-6 text-[#4AA3FF] mt-1" />
+                    <div>
+                      <p className="font-medium text-lg">POSSAMAI Geometria e Manutenção Ltda.</p>
+                      <p className="text-slate-400 mt-1">{t.contact.company_crea}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                     <div className="h-6 w-6 rounded-full border-2 border-[#4AA3FF] flex items-center justify-center text-[10px] font-bold text-[#4AA3FF] mt-1">ID</div>
+                     <p className="text-slate-300">{t.contact.tech_crea}</p>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <Phone className="h-6 w-6 text-[#4AA3FF]" />
+                    <a href="tel:+5511995483051" className="text-lg hover:text-[#4AA3FF] transition-colors">{t.contact.phone}</a>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <MessageCircle className="h-6 w-6 text-[#25D366]" />
+                    <a href="https://wa.me/5511995483051" target="_blank" rel="noopener noreferrer" className="text-lg hover:text-[#25D366] transition-colors">WhatsApp</a>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <Mail className="h-6 w-6 text-[#4AA3FF]" />
+                    <a href="mailto:contato.geometriapossamai@gmail.com" className="text-lg hover:text-[#4AA3FF] transition-colors">{t.contact.email}</a>
+                  </div>
+                </div>
+              </div>
+
+              <Card className="bg-white text-slate-900">
+                <CardContent className="p-8">
+                  <h3 className="text-xl font-bold mb-6">Solicite um Orçamento</h3>
+                  <form action="https://formsubmit.co/contato.geometriapossamai@gmail.com" method="POST" className="space-y-4">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <input name="name" placeholder="Nome / Name" className="w-full p-3 rounded-lg border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#4AA3FF]" required />
+                      <input name="company" placeholder="Empresa / Company" className="w-full p-3 rounded-lg border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#4AA3FF]" />
+                    </div>
+                    <input name="email" type="email" placeholder="E-mail" className="w-full p-3 rounded-lg border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#4AA3FF]" required />
+                    <input name="phone" placeholder="Telefone / Phone" className="w-full p-3 rounded-lg border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#4AA3FF]" />
+                    <textarea name="message" placeholder="Mensagem / Message" rows={4} className="w-full p-3 rounded-lg border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#4AA3FF] resize-none" required></textarea>
+                    <Button type="submit" className="w-full bg-[#0A1A2F] hover:bg-[#152a45] text-white font-bold h-12">
+                      Enviar / Send
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <footer className="bg-[#071224] text-slate-500 py-8 text-center text-sm border-t border-white/5">
+          <div className="container mx-auto">
+            <p>&copy; {new Date().getFullYear()} POSSAMAI Geometria e Manutenção Ltda. All rights reserved.</p>
+          </div>
+        </footer>
+      </main>
     </div>
-    <nav>
-      <a href="#quem">Quem Somos</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#galeria">Galeria</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
-
-  <main class="container">
-    <!-- PT content -->
-    <section id="pt" class="lang" style="display:block">
-      <div class="card grid">
-        <div>
-          <h2>Quem Somos</h2>
-          <p>A POSSAMAI Geometria e Manutenção Ltda. é especializada em Geometria de Máquinas, Alinhamento Óptico-Laser e Nivelamento industrial. Com 6 anos de atuação empresarial somados aos 20 de experiência técnica do fundador, Eng. Daniel Possamai da Silva, oferecemos soluções de alta precisão para diversos setores da indústria.</p>
-
-          <h3 style="margin-top:18px">Serviços</h3>
-          <div class="services">
-            <ul>
-              <li>Alinhamento óptico e a laser (motores, redutores, bombas, rolos, cardãs).</li>
-              <li>Nivelamento e geometria de máquinas.</li>
-              <li>Comissionamentos e posicionamento técnico.</li>
-              <li>Marcações técnicas e ajustes estruturais.</li>
-              <li>Avaliações de linearidade, paralelismo, perpendicularidade e verticalidade.</li>
-            </ul>
-          </div>
-
-          <h3 style="margin-top:18px">Diferenciais</h3>
-          <div class="features">
-            <div class="feature">Equipamentos WILD/Leica</div>
-            <div class="feature">Laser Prüftechnik</div>
-            <div class="feature">Calibração ISO/INMETRO</div>
-          </div>
-
-          <h3 id="galeria" style="margin-top:18px">Galeria</h3>
-          <div class="gallery">
-            <img src="/images/gallery1.jpg" alt="Equipamento 1" />
-            <img src="/images/gallery2.jpg" alt="Equipamento 2" />
-            <img src="/images/gallery3.jpg" alt="Campo" />
-          </div>
-
-        </div>
-
-        <aside class="aside">
-          <div class="card contact">
-            <h3>Contato</h3>
-            <p><strong>POSSAMAI Geometria e Manutenção Ltda.</strong></p>
-            <p>Eng. Daniel Possamai da Silva — CREA/SP </p>
-            <p>📞 +55 11 9 9548-3051</p>
-            <p>📧 contato.geometriapossamai@gmail.com</p>
-            <a class="btn" href="#contato">Solicitar Orçamento</a>
-          </div>
-
-          <div class="card">
-            <h4>Nossos Valores</h4>
-            <p>Precisão · Segurança · Transparência · Compromisso</p>
-          </div>
-        </aside>
-      </div>
-
-      <div class="card">
-        <h3>Nossa Missão</h3>
-        <p>Prover serviços técnicos de precisão com segurança, inovação e confiabilidade, contribuindo diretamente para a eficiência e o desempenho dos equipamentos industriais dos nossos clientes.</p>
-      </div>
-    </section>
-
-    <!-- EN content -->
-    <section id="en" class="lang" style="display:none">
-      <div class="card grid">
-        <div>
-          <h2>About Us</h2>
-          <p>POSSAMAI Geometria e Manutenção Ltda. specializes in Machine Geometry, Optical-Laser Alignment and Industrial Leveling. With 6 years as a company and over 20 years of technical experience by our founder, we provide high-precision solutions to multiple industrial sectors.</p>
-
-          <h3 style="margin-top:18px">Services</h3>
-          <div class="services">
-            <ul>
-              <li>Optical and laser alignment (motors, gearboxes, pumps, rolls, cardans).</li>
-              <li>Machine leveling and geometry.</li>
-              <li>Commissioning and technical positioning.</li>
-              <li>Technical marking and structural adjustments.</li>
-              <li>Assessments of linearity, parallelism, perpendicularity and verticality.</li>
-            </ul>
-          </div>
-
-          <h3 style="margin-top:18px">Differentials</h3>
-          <div class="features">
-            <div class="feature">WILD/Leica Equipment</div>
-            <div class="feature">Prüftechnik Laser</div>
-            <div class="feature">ISO/INMETRO Calibration</div>
-          </div>
-
-          <h3 id="galeria-en" style="margin-top:18px">Gallery</h3>
-          <div class="gallery">
-            <img src="/images/gallery1.jpg" alt="Equipment 1" />
-            <img src="/images/gallery2.jpg" alt="Equipment 2" />
-            <img src="/images/gallery3.jpg" alt="Field" />
-          </div>
-
-        </div>
-
-        <aside class="aside">
-          <div class="card contact">
-            <h3>Contact</h3>
-            <p><strong>POSSAMAI Geometria e Manutenção Ltda.</strong></p>
-            <p>Eng. Daniel Possamai da Silva — CREA/SP </p>
-            <p>📞 +55 11 9 9548-3051</p>
-            <p>📧 contato.geometriapossamai@gmail.com</p>
-            <a class="btn" href="#contato">Request a Quote</a>
-          </div>
-
-          <div class="card">
-            <h4>Values</h4>
-            <p>Precision · Safety · Transparency · Commitment</p>
-          </div>
-        </aside>
-      </div>
-
-      <div class="card">
-        <h3>Our Mission</h3>
-        <p>Provide precision technical services with safety, innovation and reliability, directly contributing to the efficiency and performance of our clients' industrial equipment.</p>
-      </div>
-    </section>
-
-    <!-- ES content -->
-    <section id="es" class="lang" style="display:none">
-      <div class="card grid">
-        <div>
-          <h2>Quiénes Somos</h2>
-          <p>POSSAMAI Geometria e Manutenção Ltda. está especializada en Geometría de Máquinas, Alineación Óptica-Láser y Nivelación industrial. Con 6 años de actividad empresarial y más de 20 años de experiencia técnica de nuestro fundador, ofrecemos soluciones de alta precisión para múltiples sectores industriales.</p>
-
-          <h3 style="margin-top:18px">Servicios</h3>
-          <div class="services">
-            <ul>
-              <li>Alineación óptica y láser (motores, reductores, bombas, rodillos, cardanes).</li>
-              <li>Nivelación y geometría de máquinas.</li>
-              <li>Puesta en marcha y posicionamiento técnico.</li>
-              <li>Marcaciones técnicas y ajustes estructurales.</li>
-              <li>Evaluaciones de linealidad, paralelismo, perpendicularidad y verticalidad.</li>
-            </ul>
-          </div>
-
-          <h3 style="margin-top:18px">Diferenciales</h3>
-          <div class="features">
-            <div class="feature">Equipos WILD/Leica</div>
-            <div class="feature">Láser Prüftechnik</div>
-            <div class="feature">Calibración ISO/INMETRO</div>
-          </div>
-
-          <h3 id="galeria-es" style="margin-top:18px">Galería</h3>
-          <div class="gallery">
-            <img src="/images/gallery1.jpg" alt="Equipo 1" />
-            <img src="/images/gallery2.jpg" alt="Equipo 2" />
-            <img src="/images/gallery3.jpg" alt="Campo" />
-          </div>
-
-        </div>
-
-        <aside class="aside">
-          <div class="card contact">
-            <h3>Contacto</h3>
-            <p><strong>POSSAMAI Geometria e Manutenção Ltda.</strong></p>
-            <p>Eng. Daniel Possamai da Silva — CREA/SP </p>
-            <p>📞 +55 11 9 9548-3051</p>
-            <p>📧 contato.geometriapossamai@gmail.com</p>
-            <a class="btn" href="#contato">Solicitar Presupuesto</a>
-          </div>
-
-          <div class="card">
-            <h4>Valores</h4>
-            <p>Precisión · Seguridad · Transparencia · Compromiso</p>
-          </div>
-        </aside>
-      </div>
-
-      <div class="card">
-        <h3>Nuestra Misión</h3>
-        <p>Proveer servicios técnicos de precisión con seguridad, innovación y confiabilidad, contribuyendo directamente a la eficiencia y el rendimiento de los equipos industriales de nuestros clientes.</p>
-      </div>
-    </section>
-
-    <section id="contato" class="card">
-      <h2>Contato / Contact / Contacto</h2>
-
-      <form action="https://formsubmit.co/contato.geometriapossamai@gmail.com" method="POST">
-        <div style="display:flex; gap:10px; flex-wrap:wrap">
-          <input name="name" placeholder="Nome / Name / Nombre" style="flex:1; padding:10px; border-radius:8px; border:1px solid #dce6f2" required />
-          <input name="company" placeholder="Empresa / Company / Empresa" style="flex:1; padding:10px; border-radius:8px; border:1px solid #dce6f2" />
-        </div>
-        <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap">
-          <input name="email" type="email" placeholder="E-mail" style="flex:1; padding:10px; border-radius:8px; border:1px solid #dce6f2" required />
-          <input name="phone" placeholder="Telefone / Phone" style="flex:1; padding:10px; border-radius:8px; border:1px solid #dce6f2" />
-        </div>
-        <textarea name="message" placeholder="Mensagem / Message / Mensaje" style="width:100%; min-height:120px; margin-top:10px; padding:10px; border-radius:8px; border:1px solid #dce6f2" required></textarea>
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://possamaigeometria.com.br/?msg=enviado">
-        <div style="display:flex; gap:10px; margin-top:10px; align-items:center">
-          <button type="submit" class="btn">Enviar / Send</button>
-          <small style="color:var(--muted)">Responderemos em até 48h úteis</small>
-        </div>
-      </form>
-
-      <script>
-        function setLang(l){document.querySelectorAll('.lang').forEach(s=>s.style.display='none'); document.getElementById(l).style.display='block'}
-
-        // Simple front-end submit (requires a backend endpoint to actually send)
-        document.getElementById('contactForm').addEventListener('submit', function(e){
-          e.preventDefault();
-          alert('Obrigado! Sua mensagem foi recebida. Entraremos em contato em breve.');
-          e.target.reset();
-        });
-      </script>
-
-      <p style="margin-top:16px">POSSAMAI Geometria e Manutenção Ltda. — CNPJ: 32.623.244/0001-17</p>
-    </section>
-  <script>
-  // Exibe mensagem de sucesso após envio via FormSubmit
-  const params = new URLSearchParams(window.location.search);
-  if(params.get('msg') === 'enviado'){
-    const banner = document.createElement('div');
-    banner.textContent = 'Mensagem enviada com sucesso! Obrigado pelo contato.';
-    banner.style.background = '#4AA3FF';
-    banner.style.color = '#0A1A2F';
-    banner.style.padding = '12px 20px';
-    banner.style.margin = '20px auto';
-    banner.style.maxWidth = 'var(--maxw)';
-    banner.style.borderRadius = '10px';
-    banner.style.fontWeight = '600';
-    document.body.prepend(banner);
-  }
-</script>
-</main>
-
-  <footer>
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap">
-      <div>
-        <strong>POSSAMAI Geometria e Manutenção Ltda.</strong><br/>
-        Eng. Daniel Possamai da Silva — CREA/SP 5062339303-SP
-      </div>
-      <div>
-        📞 +55 11 9 9548-3051 • 📧contato.geometriapossamai@gmail.com
-      </div>
-        © Copyright POSSAMAI Geometria e Manutenção Ltda  2025 - Todos os Direitos Reservados
-      <div>
-      <div>  
-    </div>
-  </footer>
-
-</body>
-</html>
-
+  );
+}
