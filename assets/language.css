@@ -1,0 +1,22 @@
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 9px;
+  border: 1px solid #cbd8d2;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.lang-switch a { color: #65776e; transition: color 0.18s ease; }
+.lang-switch a:hover, .lang-switch a.active { color: #13844d; }
+.lang-switch span { color: #afbeb7; }
+
+@media (max-width: 820px) {
+  .lang-switch { margin-left: auto; margin-right: 10px; padding: 5px 7px; }
+  .site-header { gap: 6px; }
+  .header-logo { max-width: 165px; }
+}
