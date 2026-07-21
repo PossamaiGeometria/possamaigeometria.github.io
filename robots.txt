@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://possamaigeometria.com.br/sitemap.xml
