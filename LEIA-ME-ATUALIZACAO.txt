@@ -1,0 +1,79 @@
+ATUALIZAÇÃO SEO — ALINHAMENTO DE MÁQUINAS
+POSSAMAI Geometria e Manutenção Ltda.
+
+CONTEÚDO DESTA ATUALIZAÇÃO
+
+1. Nova página em português:
+   https://possamaigeometria.com.br/alinhamento-de-maquinas/
+
+2. Nova página em espanhol:
+   https://possamaigeometria.com.br/es/alineacion-de-maquinas/
+
+3. Página inicial em português atualizada:
+   - título para o Google;
+   - link interno para a nova página.
+
+4. Página inicial em espanhol atualizada:
+   - título para o Google;
+   - link interno para a nova página.
+
+5. Sitemap atualizado com as quatro páginas.
+
+6. Google Analytics G-YQ3QPMF4WR preservado nas novas páginas.
+
+COMO PUBLICAR NO GITHUB
+
+1. Descompacte o arquivo recebido.
+2. Abra o repositório:
+   PossamaiGeometria/possamaigeometria.github.io
+3. Clique em Add file.
+4. Clique em Upload files.
+5. Arraste TODOS os arquivos e pastas que estão dentro da pasta descompactada
+   para a área de upload do GitHub.
+6. Confirme que aparecem, entre outros:
+   - /alinhamento-de-maquinas/index.html
+   - /es/alineacion-de-maquinas/index.html
+   - /assets/service-page.css
+   - /index.html
+   - /es/index.html
+   - /sitemap.xml
+7. No campo da mensagem, use:
+   Nova página de alinhamento de máquinas
+8. Mantenha selecionado:
+   Commit directly to the main branch
+9. Clique em Commit changes.
+
+VALIDAÇÃO APÓS A PUBLICAÇÃO
+
+Espere de 3 a 10 minutos e teste:
+
+https://possamaigeometria.com.br/alinhamento-de-maquinas/
+https://possamaigeometria.com.br/es/alineacion-de-maquinas/
+
+Teste no computador e no celular:
+- carregamento das fotografias;
+- botão do WhatsApp;
+- alternância PT/ES;
+- retorno à página inicial;
+- leitura e navegação.
+
+SEARCH CONSOLE
+
+Depois que as páginas abrirem corretamente:
+
+1. Abra o Google Search Console.
+2. Use Inspeção de URL.
+3. Cole:
+   https://possamaigeometria.com.br/alinhamento-de-maquinas/
+4. Clique em Testar URL publicado.
+5. Se o teste estiver correto, clique em Solicitar indexação.
+6. Repita para:
+   https://possamaigeometria.com.br/es/alineacion-de-maquinas/
+7. Em Sitemaps, confirme que continua cadastrado:
+   https://possamaigeometria.com.br/sitemap.xml
+
+OBSERVAÇÃO
+
+Solicitar indexação não garante posição imediata. A avaliação deverá ser feita
+pelas impressões, consultas, cliques e posição média no Search Console durante
+as semanas seguintes.
