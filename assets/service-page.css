@@ -153,7 +153,13 @@ details p { margin: 0; padding: 0 22px 22px; color: var(--muted); }
 
 .service-footer { padding: 34px 0; background: #091c15; color: #bccac1; }
 .footer-grid { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
-.service-footer img { width: 170px; filter: brightness(0) invert(1); }
+.service-footer img {
+  width: 190px;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 3px;
+  filter: none;
+}
 .service-footer p { margin: 8px 0 0; font-size: 13px; }
 .footer-links { display: flex; gap: 18px; font-size: 13px; }
 .footer-links a { text-decoration: none; }
