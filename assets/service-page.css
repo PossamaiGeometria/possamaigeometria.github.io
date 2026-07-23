@@ -57,6 +57,11 @@ a { color: inherit; }
   background: linear-gradient(110deg, rgba(7,29,21,.98) 0%, rgba(11,47,33,.92) 52%, rgba(7,25,18,.55) 100%),
     url("/servico-alinhamento-laser.jpg") center/cover;
 }
+.cardan-page .service-hero {
+  background:
+    linear-gradient(110deg, rgba(7,29,21,.98) 0%, rgba(11,47,33,.92) 52%, rgba(7,25,18,.52) 100%),
+    url("/servico-cardan-acoplado.png") center/cover;
+}
 .service-hero::after {
   content: ""; position: absolute; inset: 0; opacity: .15;
   background-image: linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px),
@@ -161,8 +166,15 @@ details p { margin: 0; padding: 0 22px 22px; color: var(--muted); }
   filter: none;
 }
 .service-footer p { margin: 8px 0 0; font-size: 13px; }
+.service-footer .trademark-note { max-width: 680px; color: #82978b; font-size: 11px; }
 .footer-links { display: flex; gap: 18px; font-size: 13px; }
 .footer-links a { text-decoration: none; }
+.content-copy .service-detail-link {
+  display: inline-flex; margin-top: 20px; color: var(--gold);
+  font-weight: 800; text-decoration: none;
+}
+.content-copy .service-detail-link:hover,
+.content-copy .service-detail-link:focus-visible { text-decoration: underline; }
 
 .floating-whatsapp {
   position: fixed; right: 20px; bottom: 20px; z-index: 30;

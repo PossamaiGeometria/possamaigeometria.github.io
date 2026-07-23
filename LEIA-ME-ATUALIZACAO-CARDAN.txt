@@ -1,0 +1,31 @@
+ATUALIZAÇÃO POSSAMAI — ALINHAMENTO DE CARDÃ ACOPLADO
+
+1. Acesse o repositório:
+   https://github.com/PossamaiGeometria/possamaigeometria.github.io
+
+2. Clique em Add file > Upload files.
+
+3. Arraste todo o conteúdo desta pasta para a área de envio.
+   Mantenha a estrutura das pastas exatamente como está.
+
+4. No campo de mensagem, use:
+   Página de alinhamento de cardã acoplado
+
+5. Mantenha selecionada a opção de gravar diretamente na branch main.
+
+6. Clique em Commit changes.
+
+7. Aguarde alguns minutos e teste:
+   https://possamaigeometria.com.br/alinhamento-de-cardan-acoplado/
+   https://possamaigeometria.com.br/es/alineacion-de-cardan-acoplado/
+
+8. Depois da publicação, solicite a indexação das duas URLs no
+   Google Search Console.
+
+Esta atualização acrescenta:
+- página própria em português;
+- página própria em espanhol;
+- links internos na página inicial e na página de alinhamento de máquinas;
+- sitemap atualizado;
+- eventos do Google Analytics nos botões de contato;
+- aviso de referência à marca PRUFTECHNIK.
