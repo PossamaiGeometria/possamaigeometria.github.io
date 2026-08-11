@@ -288,6 +288,7 @@
       }
     </style>
     <link rel="stylesheet" href="/assets/language.css" />
+    <link rel="stylesheet" href="/assets/mobile-nav.css" />
     <link
       rel="alternate"
       hreflang="pt-BR"
@@ -360,10 +361,29 @@
           ><a href="#diferenciais">Diferenciales</a
           ><a href="#contato">Contacto</a>
         </nav>
-        <div class="lang-switch" aria-label="Idioma">
-          <a href="/" lang="pt-BR">PT</a><span>|</span
-          ><a href="/es/" lang="es" class="active">ES</a>
+        <div class="lang-switch" aria-label="Seleccionar idioma">
+          <a href="/" lang="pt-BR"
+            ><img src="/assets/flag-br.svg" alt="" aria-hidden="true" /><span
+              class="visually-hidden"
+              >Português do Brasil</span
+            ></a
+          ><a href="/es/" lang="es" class="active" aria-current="page"
+            ><img src="/assets/flag-es.svg" alt="" aria-hidden="true" /><span
+              class="visually-hidden"
+              >Español</span
+            ></a
+          >
         </div>
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Abrir menú de navegación"
+        >
+          <span aria-hidden="true"></span><span aria-hidden="true"></span
+          ><span aria-hidden="true"></span>
+        </button>
         <a
           class="header-cta"
           href="https://wa.me/5511995483051?text=Hola%2C%20quisiera%20solicitar%20una%20evaluaci%C3%B3n%20t%C3%A9cnica%20para%20un%20servicio%20de%20geometr%C3%ADa%20o%20alineaci%C3%B3n%20industrial."
@@ -371,6 +391,19 @@
           rel="noreferrer"
           >Hablar con un especialista <span aria-hidden="true">↗</span></a
         >
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Navegación móvil">
+          <a href="#inicio">Inicio</a><a href="#servicos">Servicios</a
+          ><a href="#tecnologia">Tecnología</a
+          ><a href="#diferenciais">Diferenciales</a
+          ><a href="#contato">Contacto</a
+          ><a
+            class="mobile-specialist"
+            href="https://wa.me/5511995483051?text=Hola%2C%20quisiera%20solicitar%20una%20evaluaci%C3%B3n%20t%C3%A9cnica%20para%20un%20servicio%20de%20geometr%C3%ADa%20o%20alineaci%C3%B3n%20industrial."
+            target="_blank"
+            rel="noreferrer"
+            >Hablar con un especialista ↗</a
+          >
+        </nav>
       </header>
       <section class="hero" id="inicio">
         <div class="hero-grid" aria-hidden="true"></div>
@@ -899,5 +932,6 @@
         ><span aria-hidden="true">↗</span><b>WhatsApp</b></a
       >
     </main>
+    <script src="/assets/mobile-nav.js" defer></script>
   </body>
 </html>

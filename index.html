@@ -290,6 +290,7 @@
       }
     </style>
     <link rel="stylesheet" href="/assets/language.css" />
+    <link rel="stylesheet" href="/assets/mobile-nav.css" />
     <link
       rel="alternate"
       hreflang="pt-BR"
@@ -364,10 +365,29 @@
           ><a href="#diferenciais">Diferenciais</a
           ><a href="#contato">Contato</a>
         </nav>
-        <div class="lang-switch" aria-label="Idioma">
-          <a href="/" lang="pt-BR" class="active">PT</a><span>|</span
-          ><a href="/es/" lang="es">ES</a>
+        <div class="lang-switch" aria-label="Selecionar idioma">
+          <a href="/" lang="pt-BR" class="active" aria-current="page"
+            ><img src="/assets/flag-br.svg" alt="" aria-hidden="true" /><span
+              class="visually-hidden"
+              >Português do Brasil</span
+            ></a
+          ><a href="/es/" lang="es"
+            ><img src="/assets/flag-es.svg" alt="" aria-hidden="true" /><span
+              class="visually-hidden"
+              >Español</span
+            ></a
+          >
         </div>
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Abrir menu de navegação"
+        >
+          <span aria-hidden="true"></span><span aria-hidden="true"></span
+          ><span aria-hidden="true"></span>
+        </button>
         <a
           class="header-cta"
           href="https://wa.me/5511995483051?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20t%C3%A9cnica%20para%20um%20servi%C3%A7o%20de%20geometria%20ou%20alinhamento%20industrial."
@@ -375,6 +395,21 @@
           rel="noreferrer"
           >Falar com um especialista <span aria-hidden="true">↗</span></a
         >
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Navegação móvel">
+          <a href="#inicio">Início</a><a href="#servicos">Serviços</a
+          ><a href="#aplicacoes">Aplicações</a
+          ><a href="#tecnologia">Tecnologia</a
+          ><a href="#qualificacao">Qualificação</a
+          ><a href="#diferenciais">Diferenciais</a
+          ><a href="#contato">Contato</a
+          ><a
+            class="mobile-specialist"
+            href="https://wa.me/5511995483051?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20t%C3%A9cnica%20para%20um%20servi%C3%A7o%20de%20geometria%20ou%20alinhamento%20industrial."
+            target="_blank"
+            rel="noreferrer"
+            >Falar com um especialista ↗</a
+          >
+        </nav>
       </header>
       <section class="hero" id="inicio">
         <div class="hero-grid" aria-hidden="true"></div>
@@ -1009,5 +1044,6 @@
         ><span aria-hidden="true">↗</span><b>WhatsApp</b></a
       >
     </main>
+    <script src="/assets/mobile-nav.js" defer></script>
   </body>
 </html>
