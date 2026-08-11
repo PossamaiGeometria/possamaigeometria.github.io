@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.classList.remove("is-open");
   }
 
+  function updateHeaderState() {
+    var header = document.querySelector(".site-header");
+    if (header) header.classList.toggle("is-scrolled", window.scrollY > 12);
+  }
+
   toggle.addEventListener("click", function () {
     var opening = toggle.getAttribute("aria-expanded") !== "true";
     toggle.setAttribute("aria-expanded", String(opening));
@@ -26,4 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", function () {
     if (window.innerWidth > 1100) closeMenu();
   });
+
+  window.addEventListener("scroll", updateHeaderState, { passive: true });
+  updateHeaderState();
 });
