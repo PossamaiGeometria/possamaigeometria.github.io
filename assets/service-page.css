@@ -55,12 +55,12 @@ a { color: inherit; }
 .service-hero {
   position: relative; overflow: hidden; color: #fff;
   background: linear-gradient(110deg, rgba(7,29,21,.98) 0%, rgba(11,47,33,.92) 52%, rgba(7,25,18,.55) 100%),
-    url("/servico-alinhamento-laser.jpg") center/cover;
+    url("/servico-alinhamento-laser.webp") center/cover;
 }
 .cardan-page .service-hero {
   background:
     linear-gradient(110deg, rgba(7,29,21,.98) 0%, rgba(11,47,33,.92) 52%, rgba(7,25,18,.52) 100%),
-    url("/servico-cardan-acoplado.png") center/cover;
+    url("/servico-cardan-acoplado.webp") center/cover;
 }
 .service-hero::after {
   content: ""; position: absolute; inset: 0; opacity: .15;

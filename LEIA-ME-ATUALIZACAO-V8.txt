@@ -1,0 +1,20 @@
+POSSAMAI — ATUALIZAÇÃO V8 (11/08/2026)
+
+O pacote contém o site completo e deve ser enviado para a raiz da branch main
+do repositório PossamaiGeometria/possamaigeometria.github.io.
+
+Principais melhorias desta versão:
+- imagens de conteúdo convertidas para WebP e carregamento otimizado;
+- dimensões de imagens declaradas para reduzir deslocamentos de layout;
+- metadados de SEO, Open Graph, Twitter Card e hreflang revisados;
+- sitemap atualizado;
+- formulário com campo antispam e páginas de confirmação em português e espanhol;
+- eventos de contato e formulário preparados para o Google Analytics;
+- acessibilidade do seletor de idiomas e de blocos visuais aprimorada;
+- validação estrutural das oito páginas HTML e dos dados JSON-LD.
+
+Após publicar:
+1. aguarde a conclusão do GitHub Pages;
+2. abra https://possamaigeometria.com.br em janela privativa;
+3. teste português, espanhol, páginas de serviços e formulário;
+4. confira o site no computador e no iPhone.
