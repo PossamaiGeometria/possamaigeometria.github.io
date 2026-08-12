@@ -1,0 +1,15 @@
+POSSAMAI — ATUALIZAÇÃO V9 — 11/08/2026
+
+Correção aplicada:
+- envio dos formulários PT e ES pelo endpoint AJAX oficial do FormSubmit;
+- redirecionamento controlado para /obrigado/ e /es/gracias/;
+- compatibilidade com Safari no iPhone;
+- página de sucesso exibida somente após confirmação do processamento;
+- mensagem de erro visível caso o FormSubmit ou a conexão não confirmem o envio;
+- preservação do rastreamento de conversões no Google Analytics.
+
+Para publicar, envie todo o conteúdo desta pasta à raiz do repositório,
+substituindo os arquivos existentes quando solicitado.
+
+Commit sugerido:
+Corrige envio dos formulários no Safari móvel
