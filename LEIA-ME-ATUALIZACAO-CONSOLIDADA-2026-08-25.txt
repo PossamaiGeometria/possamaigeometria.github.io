@@ -1,0 +1,13 @@
+POSSAMAI — atualização consolidada do site (25/08/2026)
+
+Correções incluídas:
+- Padronização das bandeiras Brasil/Espanha nas páginas Home, Alinhamento de Máquinas e Cardã Acoplado.
+- Bandeiras das páginas de serviço com o mesmo tamanho e comportamento visual da Home, sem traço sob o idioma ativo.
+- Correção da versão espanhola das páginas de serviço para manter as duas bandeiras visíveis.
+- Troca de idioma preservando a seção e a posição aproximada de leitura na página equivalente.
+- Mapeamento automático de seções PT/ES com IDs diferentes (ex.: Dúvidas/Preguntas, Preparação/Preparación).
+- Correção do histórico de experiência para 2006 na Home em espanhol.
+- Atualização do texto técnico da Home em espanhol para o mesmo posicionamento validado da versão PT-BR, incluindo Wild Heerbrugg / Leica Geosystems e PRUFTECHNIK.
+
+Arquivo novo:
+- assets/language-position.js
