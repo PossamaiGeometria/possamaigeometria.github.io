@@ -58,8 +58,8 @@ a { color: inherit; }
 }
 
 .language .active {
-  border-bottom: 2px solid var(--green);
-  padding-bottom: 3px;
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .button {
