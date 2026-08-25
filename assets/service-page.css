@@ -38,9 +38,29 @@ a { color: inherit; }
 .service-nav { display: flex; justify-content: center; gap: 24px; }
 .service-nav a, .back-home { text-decoration: none; font-size: 14px; font-weight: 700; }
 .service-nav a:hover, .back-home:hover { color: var(--green); }
-.language { display: flex; gap: 8px; font-size: 13px; }
-.language a { text-decoration: none; font-weight: 800; }
-.language .active { color: var(--green); border-bottom: 2px solid var(--green); }
+.language {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.language a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.language img {
+  display: block;
+  width: 22px;
+  height: auto;
+}
+
+.language .active {
+  border-bottom: 2px solid var(--green);
+  padding-bottom: 3px;
+}
 
 .button {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
